@@ -14,7 +14,7 @@ Use loop and array to design and implement this script.
 '
 
 cd /bin
-l=(ls /bin)
+l=ls /bin
 count=0
 for x in {a..z};
 do
