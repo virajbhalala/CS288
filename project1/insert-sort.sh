@@ -1,18 +1,20 @@
 #Write a bash script that sort wihout using any built in commands
 
 #One way to save all argments in the array
-lst=("$@")
-    
-for((i=1; i<$#; i++ )); do
-    j=$i
-    num=${lst[i]}
-    while [ $j -gt 0 ]; do
-	if [${lst[$j-1]} -gt $num ];then
-	    lst[$j]=lst[$j-1]
-	    let j--
-	fi
-	let j--
-    lst[j]=num
-    done
+#lst=("$@")
+lst=()
 
+for x in $@; do
+	pos=0
+	for value in ${lst[@]}; do
+		if [ $x -lt $value ]; then
+			temp=${vals[$pos]}
+			lst[$pos]=$x
+			x=$temp
+		fi
+		let cursor++
+	done
+	lst+=($x)
 done
+
+echo ${lst[@]}
