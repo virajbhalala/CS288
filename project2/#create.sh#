@@ -1,0 +1,11 @@
+ : `Your command "create.sh 3 4 /home/cs288/hw2/tree depth" will create a tree
+ with depth 3 and breath 4 at /home/cs288/hw2/tree-depth in depth-first
+
+while your command "create.sh 4 3 /home/cs288/hw2/tree breadth" will create a 
+tree with depth 4 and breath 3 at /home/cs288/hw2/tree-breadth in breadth-first.
+`
+
+depth=$1
+breath=$2
+path=$3
+type=$4 #depth or breadth
