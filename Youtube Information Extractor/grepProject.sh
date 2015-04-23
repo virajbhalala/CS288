@@ -12,7 +12,7 @@ echo "">$output
 echo "">output_title.txt
 echo "">output_views.txt;
 echo "">output_author.txt;
-echo "">output_Durationpush.txt;
+echo "">output_Duration.txt;
 
 
 function grep_views(){
@@ -48,9 +48,7 @@ function grep_Duration(){
 	grep "\- Duration: \(.*\).</span>" $file |
 	while read line; do
 		x=`expr "$line" : ".*Duration: \(.*\).</span></h3>"`
-		#echo "$x" >> output_author.txt;
-		echo $x;
-		#echo $line;
+		echo "$x" >> output_Duration.txt;
 	done
 }
 
