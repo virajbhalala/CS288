@@ -1,4 +1,4 @@
-# Programming-in-Linuxt
+# Programming-in-Linux
 This will include all my Bash, Shell, and C practice
 
 
